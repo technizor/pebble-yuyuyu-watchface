@@ -1,0 +1,31 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Technizor",
+    "longName": "Yuki Yuna wa Yusha de Aru Watchface",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/yuyuyu_icon.png",
+                "menuIcon": true,
+                "name": "i_yuyuyu_icon",
+                "type": "png"
+            },
+            {
+                "file": "images/yuyuyu.png",
+                "name": "i_yuyuyu_back",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "YuYuYu Watchface",
+    "uuid": "320bf14e-4c89-45bd-8dac-58f5e7a363fc",
+    "versionCode": 1,
+    "versionLabel": "0.1",
+    "watchapp": {
+        "watchface": true
+    }
+}
