@@ -9,6 +9,18 @@
     "resources": {
         "media": [
             {
+                "characterRegex": "[ADFJMNOSTWabcdeghilnoprtuvy0-9:. ]",
+                "file": "fonts/TerminusTTF-4.39.ttf",
+                "name": "FONT_TERMINUS_24",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[0-9:. ]",
+                "file": "fonts/TerminusTTF-4.39.ttf",
+                "name": "FONT_TERMINUS_NUMBERS_32",
+                "type": "font"
+            },
+            {
                 "file": "images/yuyuyu_icon.png",
                 "menuIcon": true,
                 "name": "i_yuyuyu_icon",
