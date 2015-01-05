@@ -9,6 +9,41 @@
     "resources": {
         "media": [
             {
+                "file": "images/karin_back.png",
+                "name": "i_character_karin",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_s10.png",
+                "name": "i_flower_anim_karin_s10",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_s01.png",
+                "name": "i_flower_anim_karin_s01",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_m10.png",
+                "name": "i_flower_anim_karin_m10",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_m01.png",
+                "name": "i_flower_anim_karin_m01",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84.png",
+                "name": "i_flower_base_karin",
+                "type": "png"
+            },
+            {
+                "file": "images/yuyuyu_temp.png",
+                "name": "i_yuyuyu_back",
+                "type": "png"
+            },
+            {
                 "characterRegex": "[ADFJMNOSTWabcdeghilnoprtuvy0-9:. ]",
                 "file": "fonts/TerminusTTF-4.39.ttf",
                 "name": "FONT_TERMINUS_24",
@@ -24,11 +59,6 @@
                 "file": "images/yuyuyu_icon.png",
                 "menuIcon": true,
                 "name": "i_yuyuyu_icon",
-                "type": "png"
-            },
-            {
-                "file": "images/yuyuyu.png",
-                "name": "i_yuyuyu_back",
                 "type": "png"
             }
         ]
