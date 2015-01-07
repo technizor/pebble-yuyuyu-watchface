@@ -199,7 +199,7 @@
                 "file": "data/yuyuyu_icon.png",
                 "menuIcon": true,
                 "name": "i_yuyuyu_icon",
-                "type": "png"
+                "type": "raw"
             }
         ]
     },
