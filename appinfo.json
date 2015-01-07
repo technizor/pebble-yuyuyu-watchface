@@ -9,185 +9,10 @@
     "resources": {
         "media": [
             {
-                "file": "data/karin_flower.png",
-                "name": "i_flower_base_karin",
+                "file": "data/yuyuyu_icon.png",
+                "menuIcon": true,
+                "name": "i_yuyuyu_icon",
                 "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01j.png",
-                "name": "i_karin_s01j",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01i.png",
-                "name": "i_karin_s01i",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01h.png",
-                "name": "i_karin_s01h",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01g.png",
-                "name": "i_karin_s01g",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01f.png",
-                "name": "i_karin_s01f",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01e.png",
-                "name": "i_karin_s01e",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01d.png",
-                "name": "i_karin_s01d",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01c.png",
-                "name": "i_karin_s01c",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01b.png",
-                "name": "i_karin_s01b",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s01a.png",
-                "name": "i_karin_s01a",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01j.png",
-                "name": "i_karin_m01j",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01i.png",
-                "name": "i_karin_m01i",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01h.png",
-                "name": "i_karin_m01h",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01g.png",
-                "name": "i_karin_m01g",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01f.png",
-                "name": "i_karin_m01f",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01e.png",
-                "name": "i_karin_m01e",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01d.png",
-                "name": "i_karin_m01d",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01c.png",
-                "name": "i_karin_m01c",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01b.png",
-                "name": "i_karin_m01b",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m01a.png",
-                "name": "i_karin_m01a",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s10f.png",
-                "name": "i_karin_s10f",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s10e.png",
-                "name": "i_karin_s10e",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s10d.png",
-                "name": "i_karin_s10d",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s10c.png",
-                "name": "i_karin_s10c",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s10b.png",
-                "name": "i_karin_s10b",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_s10a.png",
-                "name": "i_karin_s10a",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m10f.png",
-                "name": "i_karin_m10f",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m10e.png",
-                "name": "i_karin_m10e",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m10d.png",
-                "name": "i_karin_m10d",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m10c.png",
-                "name": "i_karin_m10c",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m10b.png",
-                "name": "i_karin_m10b",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_flower_m10a.png",
-                "name": "i_karin_m10a",
-                "type": "raw"
-            },
-            {
-                "file": "data/karin_back.png",
-                "name": "i_character_karin",
-                "type": "raw"
-            },
-            {
-                "file": "data/yuyuyu_temp.png",
-                "name": "i_yuyuyu_back",
-                "type": "raw"
-            },
-            {
-                "characterRegex": "[ADFJMNOSTWabcdeghilnoprtuvy0-9:. ]",
-                "file": "fonts/TerminusTTF-4.39.ttf",
-                "name": "FONT_TERMINUS_24",
-                "type": "font"
             },
             {
                 "characterRegex": "[0-9:. ]",
@@ -196,9 +21,184 @@
                 "type": "font"
             },
             {
-                "file": "data/yuyuyu_icon.png",
-                "menuIcon": true,
-                "name": "i_yuyuyu_icon",
+                "characterRegex": "[ADFJMNOSTWabcdeghilnoprtuvy0-9:. ]",
+                "file": "fonts/TerminusTTF-4.39.ttf",
+                "name": "FONT_TERMINUS_24",
+                "type": "font"
+            },
+            {
+                "file": "data/yuyuyu_temp.png",
+                "name": "i_yuyuyu_back",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_back.png",
+                "name": "i_character_karin",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m10a.png",
+                "name": "i_karin_m10a",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m10b.png",
+                "name": "i_karin_m10b",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m10c.png",
+                "name": "i_karin_m10c",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m10d.png",
+                "name": "i_karin_m10d",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m10e.png",
+                "name": "i_karin_m10e",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m10f.png",
+                "name": "i_karin_m10f",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s10a.png",
+                "name": "i_karin_s10a",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s10b.png",
+                "name": "i_karin_s10b",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s10c.png",
+                "name": "i_karin_s10c",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s10d.png",
+                "name": "i_karin_s10d",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s10e.png",
+                "name": "i_karin_s10e",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s10f.png",
+                "name": "i_karin_s10f",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01a.png",
+                "name": "i_karin_m01a",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01b.png",
+                "name": "i_karin_m01b",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01c.png",
+                "name": "i_karin_m01c",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01d.png",
+                "name": "i_karin_m01d",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01e.png",
+                "name": "i_karin_m01e",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01f.png",
+                "name": "i_karin_m01f",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01g.png",
+                "name": "i_karin_m01g",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01h.png",
+                "name": "i_karin_m01h",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01i.png",
+                "name": "i_karin_m01i",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_m01j.png",
+                "name": "i_karin_m01j",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01a.png",
+                "name": "i_karin_s01a",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01b.png",
+                "name": "i_karin_s01b",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01c.png",
+                "name": "i_karin_s01c",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01d.png",
+                "name": "i_karin_s01d",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01e.png",
+                "name": "i_karin_s01e",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01f.png",
+                "name": "i_karin_s01f",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01g.png",
+                "name": "i_karin_s01g",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01h.png",
+                "name": "i_karin_s01h",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01i.png",
+                "name": "i_karin_s01i",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower_s01j.png",
+                "name": "i_karin_s01j",
+                "type": "raw"
+            },
+            {
+                "file": "data/karin_flower.png",
+                "name": "i_flower_base_karin",
                 "type": "raw"
             }
         ]
