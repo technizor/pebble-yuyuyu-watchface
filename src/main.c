@@ -1,6 +1,7 @@
 #include <pebble.h>
+#include "png.h"
 
-static uint8_t m01[10]={
+static uint32_t m01[10]={
 RESOURCE_ID_i_karin_m01a,
 RESOURCE_ID_i_karin_m01b,
 RESOURCE_ID_i_karin_m01c,
@@ -12,7 +13,7 @@ RESOURCE_ID_i_karin_m01h,
 RESOURCE_ID_i_karin_m01i,
 RESOURCE_ID_i_karin_m01j
 };
-static uint8_t m10[6]={
+static uint32_t m10[6]={
 RESOURCE_ID_i_karin_m10a,
 RESOURCE_ID_i_karin_m10b,
 RESOURCE_ID_i_karin_m10c,
@@ -20,7 +21,7 @@ RESOURCE_ID_i_karin_m10d,
 RESOURCE_ID_i_karin_m10e,
 RESOURCE_ID_i_karin_m10f
 };
-static uint8_t s01[10]={
+static uint32_t s01[10]={
 RESOURCE_ID_i_karin_s01a,
 RESOURCE_ID_i_karin_s01b,
 RESOURCE_ID_i_karin_s01c,
@@ -32,7 +33,7 @@ RESOURCE_ID_i_karin_s01h,
 RESOURCE_ID_i_karin_s01i,
 RESOURCE_ID_i_karin_s01j
 };
-static uint8_t s10[6]={
+static uint32_t s10[6]={
 RESOURCE_ID_i_karin_s10a,
 RESOURCE_ID_i_karin_s10b,
 RESOURCE_ID_i_karin_s10c,
@@ -113,25 +114,25 @@ static void update_time() {
   if(thisSec%10 != lastSec%10)
     {
   gbitmap_destroy(s_flower_anim_bitmap_s01);
-  s_flower_anim_bitmap_s01 = gbitmap_create_with_resource(s01[thisSec%10]);
+  s_flower_anim_bitmap_s01 = gbitmap_create_with_png_resource(s01[thisSec%10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_s01, s_flower_anim_bitmap_s01);
   }
   if(thisSec/10 != lastSec/10)
     {
   gbitmap_destroy(s_flower_anim_bitmap_s10);
-  s_flower_anim_bitmap_s10 = gbitmap_create_with_resource(s10[thisSec/10]);
+  s_flower_anim_bitmap_s10 = gbitmap_create_with_png_resource(s10[thisSec/10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_s10, s_flower_anim_bitmap_s10);
   }
   if(thisMin%10 != lastMin%10)
     {
   gbitmap_destroy(s_flower_anim_bitmap_m01);
-  s_flower_anim_bitmap_m01 = gbitmap_create_with_resource(m01[thisMin%10]);
+  s_flower_anim_bitmap_m01 = gbitmap_create_with_png_resource(m01[thisMin%10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_m01, s_flower_anim_bitmap_m01);
   }
   if(thisMin/10 != lastMin/10)
     {
   gbitmap_destroy(s_flower_anim_bitmap_m10);
-  s_flower_anim_bitmap_m10 = gbitmap_create_with_resource(m10[thisMin/10]);
+  s_flower_anim_bitmap_m10 = gbitmap_create_with_png_resource(m10[thisMin/10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_m10, s_flower_anim_bitmap_m10);
   }
   lastSec = thisSec;
@@ -142,16 +143,16 @@ static void update_time() {
 static void main_window_load(Window *window) {
   
   // Background Image
-  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_i_yuyuyu_back);
+  s_background_bitmap = gbitmap_create_with_png_resource(RESOURCE_ID_i_yuyuyu_back);
   s_background_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   // Character Base Image
-  s_character_bitmap = gbitmap_create_with_resource(RESOURCE_ID_i_character_karin);
+  s_character_bitmap = gbitmap_create_with_png_resource(RESOURCE_ID_i_character_karin);
   s_character_layer = bitmap_layer_create(GRect(0,42,60,84));
   bitmap_layer_set_compositing_mode(s_character_layer,GCompOpAnd);
   bitmap_layer_set_bitmap(s_character_layer,s_character_bitmap);
   // Flower Base Image
-  s_flower_base_bitmap = gbitmap_create_with_resource(RESOURCE_ID_i_flower_base_karin);
+  s_flower_base_bitmap = gbitmap_create_with_png_resource(RESOURCE_ID_i_flower_base_karin);
   s_flower_base_layer = bitmap_layer_create(GRect(60,42,84,84));
   bitmap_layer_set_bitmap(s_flower_base_layer,s_flower_base_bitmap);
  
