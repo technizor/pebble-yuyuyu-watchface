@@ -1,6 +1,7 @@
 #include <pebble.h>
+#include "png.h"
 
-static uint8_t m01[10]={
+static uint32_t m01[10]={
 RESOURCE_ID_i_karin_m01a,
 RESOURCE_ID_i_karin_m01b,
 RESOURCE_ID_i_karin_m01c,
@@ -12,7 +13,7 @@ RESOURCE_ID_i_karin_m01h,
 RESOURCE_ID_i_karin_m01i,
 RESOURCE_ID_i_karin_m01j
 };
-static uint8_t m10[6]={
+static uint32_t m10[6]={
 RESOURCE_ID_i_karin_m10a,
 RESOURCE_ID_i_karin_m10b,
 RESOURCE_ID_i_karin_m10c,
@@ -20,7 +21,7 @@ RESOURCE_ID_i_karin_m10d,
 RESOURCE_ID_i_karin_m10e,
 RESOURCE_ID_i_karin_m10f
 };
-static uint8_t s01[10]={
+static uint32_t s01[10]={
 RESOURCE_ID_i_karin_s01a,
 RESOURCE_ID_i_karin_s01b,
 RESOURCE_ID_i_karin_s01c,
@@ -32,7 +33,7 @@ RESOURCE_ID_i_karin_s01h,
 RESOURCE_ID_i_karin_s01i,
 RESOURCE_ID_i_karin_s01j
 };
-static uint8_t s10[6]={
+static uint32_t s10[6]={
 RESOURCE_ID_i_karin_s10a,
 RESOURCE_ID_i_karin_s10b,
 RESOURCE_ID_i_karin_s10c,
