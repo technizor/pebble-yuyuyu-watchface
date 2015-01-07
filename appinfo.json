@@ -9,173 +9,33 @@
     "resources": {
         "media": [
             {
-                "file": "images/karin_flower.png",
-                "name": "i_flower_base_karin",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01j.png",
-                "name": "i_karin_s01j",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01i.png",
-                "name": "i_karin_s01i",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01h.png",
-                "name": "i_karin_s01h",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01g.png",
-                "name": "i_karin_s01g",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01f.png",
-                "name": "i_karin_s01f",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01e.png",
-                "name": "i_karin_s01e",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01d.png",
-                "name": "i_karin_s01d",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01c.png",
-                "name": "i_karin_s01c",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01b.png",
-                "name": "i_karin_s01b",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s01a.png",
-                "name": "i_karin_s01a",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01j.png",
-                "name": "i_karin_m01j",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01i.png",
-                "name": "i_karin_m01i",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01h.png",
-                "name": "i_karin_m01h",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01g.png",
-                "name": "i_karin_m01g",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01f.png",
-                "name": "i_karin_m01f",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01e.png",
-                "name": "i_karin_m01e",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01d.png",
-                "name": "i_karin_m01d",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01c.png",
-                "name": "i_karin_m01c",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01b.png",
-                "name": "i_karin_m01b",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m01a.png",
-                "name": "i_karin_m01a",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s10f.png",
-                "name": "i_karin_s10f",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s10e.png",
-                "name": "i_karin_s10e",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s10d.png",
-                "name": "i_karin_s10d",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s10c.png",
-                "name": "i_karin_s10c",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s10b.png",
-                "name": "i_karin_s10b",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_s10a.png",
-                "name": "i_karin_s10a",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m10f.png",
-                "name": "i_karin_m10f",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m10e.png",
-                "name": "i_karin_m10e",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m10d.png",
-                "name": "i_karin_m10d",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m10c.png",
-                "name": "i_karin_m10c",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m10b.png",
-                "name": "i_karin_m10b",
-                "type": "png"
-            },
-            {
-                "file": "images/karin_flower_m10a.png",
-                "name": "i_karin_m10a",
-                "type": "png"
-            },
-            {
                 "file": "images/karin_back.png",
                 "name": "i_character_karin",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_s10.png",
+                "name": "i_flower_anim_karin_s10",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_s01.png",
+                "name": "i_flower_anim_karin_s01",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_m10.png",
+                "name": "i_flower_anim_karin_m10",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84_m01.png",
+                "name": "i_flower_anim_karin_m01",
+                "type": "png"
+            },
+            {
+                "file": "images/karin_flower_84.png",
+                "name": "i_flower_base_karin",
                 "type": "png"
             },
             {
