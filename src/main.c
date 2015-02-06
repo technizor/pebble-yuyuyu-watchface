@@ -1,5 +1,6 @@
 #include <pebble.h>
 #include "png.h"
+#define TEST_PTR(ptr) if((ptr)==NULL) APP_LOG(APP_LOG_LEVEL_INFO, "Fail to allocate pointer!")
 
 static uint32_t m01[10]={
 RESOURCE_ID_i_karin_m01a,
@@ -71,6 +72,8 @@ static GBitmap *s_flower_anim_bitmap_m10;
 
 static uint lastSec;
 static uint lastMin;
+static void makeTextLayer(Window *window, TextLayer *layer, uint8_t vPos, uint32_t fontHandle);
+static void makeFlowerLayer(Window *window, BitmapLayer *layer);
 /*
 void  loadS01();
 void  loadS10();
@@ -113,27 +116,31 @@ static void update_time() {
   //*
   if(thisSec%10 != lastSec%10)
     {
-  gbitmap_destroy(s_flower_anim_bitmap_s01);
+    free(s_flower_anim_bitmap_s01);
   s_flower_anim_bitmap_s01 = gbitmap_create_with_png_resource(s01[thisSec%10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_s01, s_flower_anim_bitmap_s01);
+  TEST_PTR(s_flower_anim_bitmap_s01);
   }
   if(thisSec/10 != lastSec/10)
     {
-  gbitmap_destroy(s_flower_anim_bitmap_s10);
+    free(s_flower_anim_bitmap_s10);
   s_flower_anim_bitmap_s10 = gbitmap_create_with_png_resource(s10[thisSec/10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_s10, s_flower_anim_bitmap_s10);
+  TEST_PTR(s_flower_anim_bitmap_s10);
   }
   if(thisMin%10 != lastMin%10)
     {
-  gbitmap_destroy(s_flower_anim_bitmap_m01);
+    free(s_flower_anim_bitmap_m01);
   s_flower_anim_bitmap_m01 = gbitmap_create_with_png_resource(m01[thisMin%10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_m01, s_flower_anim_bitmap_m01);
+  TEST_PTR(s_flower_anim_bitmap_m01);
   }
   if(thisMin/10 != lastMin/10)
     {
-  gbitmap_destroy(s_flower_anim_bitmap_m10);
+    free(s_flower_anim_bitmap_m10);
   s_flower_anim_bitmap_m10 = gbitmap_create_with_png_resource(m10[thisMin/10]);
   bitmap_layer_set_bitmap(s_flower_anim_layer_m10, s_flower_anim_bitmap_m10);
+  TEST_PTR(s_flower_anim_bitmap_m10);
   }
   lastSec = thisSec;
   lastMin = thisMin;
@@ -155,60 +162,44 @@ static void main_window_load(Window *window) {
   s_flower_base_bitmap = gbitmap_create_with_png_resource(RESOURCE_ID_i_flower_base_karin);
   s_flower_base_layer = bitmap_layer_create(GRect(60,42,84,84));
   bitmap_layer_set_bitmap(s_flower_base_layer,s_flower_base_bitmap);
- 
-  // Create Animation Layers
-  //*
-  s_flower_anim_layer_s01 = bitmap_layer_create(GRect(60,42,84,84));
-  s_flower_anim_layer_s10 = bitmap_layer_create(GRect(60,42,84,84));
-  s_flower_anim_layer_m01 = bitmap_layer_create(GRect(60,42,84,84));
-  s_flower_anim_layer_m10 = bitmap_layer_create(GRect(60,42,84,84));
-  //*/
-  /*
-  s_flower_anim_layer_s01 = bitmap_layer_create(GRect(0,-6,84,84));
-  s_flower_anim_layer_s10 = bitmap_layer_create(GRect(84,-6,84,84));
-  s_flower_anim_layer_m01 = bitmap_layer_create(GRect(0,66,84,84));
-  s_flower_anim_layer_m10 = bitmap_layer_create(GRect(84,66,84,84));
-  //*/
-  bitmap_layer_set_compositing_mode(s_flower_anim_layer_s01,GCompOpAnd);
-  bitmap_layer_set_compositing_mode(s_flower_anim_layer_s10,GCompOpAnd);
-  bitmap_layer_set_compositing_mode(s_flower_anim_layer_m01,GCompOpAnd);
-  bitmap_layer_set_compositing_mode(s_flower_anim_layer_m10,GCompOpAnd);
   
-  // Create time TextLayer
-  s_time_layer = text_layer_create(GRect(0, 125, 144, 50));
-  text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorWhite);
-  text_layer_set_text(s_time_layer, "00:00:00");
-  text_layer_set_font(s_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_TERMINUS_NUMBERS_32)));
-  text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
-  
-  // Create date TextLayer
-  s_date_layer = text_layer_create(GRect(0, 5, 144, 50));
-  text_layer_set_background_color(s_date_layer, GColorClear);
-  text_layer_set_text_color(s_date_layer, GColorWhite);
-  text_layer_set_text(s_date_layer, "Sun Jan 01");
-  text_layer_set_font(s_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_TERMINUS_24)));
-  text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
-
-  // Add it as a child layer to the Window's root layer
-  //*
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_character_layer));
-  
+ 
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_flower_base_layer));
-  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_flower_anim_layer_m10));
-  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_flower_anim_layer_m01));
-  layer_add_child(window_get_root_layer(window),bitmap_layer_get_layer(s_flower_anim_layer_s10));
-  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_flower_anim_layer_s01));
-  //*/
-  layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_time_layer));
-  layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_date_layer)); 
-  //*/
+  
+  // Create Animation Layers
+  makeFlowerLayer(window, s_flower_anim_layer_s01);
+  makeFlowerLayer(window, s_flower_anim_layer_s10);
+  makeFlowerLayer(window, s_flower_anim_layer_m01);
+  makeFlowerLayer(window, s_flower_anim_layer_m10);
+  
+  // Create time TextLayer
+  makeTextLayer(window, s_time_layer,125,RESOURCE_ID_FONT_TERMINUS_NUMBERS_32);
+  
+  // Create date TextLayer
+  makeTextLayer(window, s_date_layer,5,RESOURCE_ID_FONT_TERMINUS_24);
   
   // Make sure the time is displayed from the start
   lastSec=61;
   lastMin=61;
   update_time();
+}
+
+static void makeFlowerLayer(Window *window, BitmapLayer *layer)
+  {  
+  layer = bitmap_layer_create(GRect(60,42,84,84));
+  bitmap_layer_set_compositing_mode(layer,GCompOpAnd);
+  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(layer));
+}
+
+static void makeTextLayer(Window *window, TextLayer *layer, uint8_t vPos, uint32_t fontHandle){
+  layer = text_layer_create(GRect(0, 5, 144, 50));
+  text_layer_set_background_color(layer, GColorClear);
+  text_layer_set_text_color(layer, GColorWhite);
+  text_layer_set_font(layer, fonts_load_custom_font(resource_get_handle(fontHandle)));
+  text_layer_set_text_alignment(layer, GTextAlignmentCenter);
+  layer_add_child(window_get_root_layer(window), text_layer_get_layer(layer)); 
 }
 
 static void main_window_unload(Window *window) {
